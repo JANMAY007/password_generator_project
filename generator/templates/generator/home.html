@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <div class="container text-center">
+        <h1>Password Generator</h1>
+        <form action="{% url 'password' %}">
+            <input name="length" value="between 8-65">
+            Length
+            <br>
+            <input type="checkbox" name="uppercase"> Uppercase
+            <br>
+            <input type="checkbox" name="numbers"> Numbers
+            <br>
+            <input type="checkbox" name="special"> Special Characters
+            <br>
+            <input type="submit" value="Generate Password" class="btn btn-primary">
+        </form>
+        <a href="{% url 'about' %}" class="btn btn-info">About</a>
+    </div>
+</body>
+</html>

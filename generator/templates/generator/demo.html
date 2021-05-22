@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Forms</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Admission Form</h1>
+        <form action="data.asp">
+            <legend><span class="number">1</span>Personal Information</legend>
+            <table cellspacing="30">
+                <tr>
+                    <td>
+                        <label for="firstname">First name: </label>
+                        <input type="text" name="firstname" id="firstname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lastname">Last name: </label>
+                        <input type="text" name="lastname" id="lastname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fathername">Father name: </label>
+                        <input type="text" name="fathername" id="fathername">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mothername">Mother name: </label>
+                        <input type="text" name="mothername" id="mothername">
+                    </td>
+                </tr>
+            </table>
+            <legend><span class="number">2</span>Login Information</legend>
+            <table cellspacing="30">
+                <tr>
+                    <td>
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password: </label>
+                        <input type="password" name="pass" id="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="repass">Retype Password: </label>
+                        <input type="password" name="repass" id="repass">
+                    </td>
+                </tr>
+            </table>
+            <legend><span class="number">3</span>College Information</legend>
+            <table cellspacing="30">
+                <tr>
+                    <td valign="top">
+                        <label for="course">Courses: </label>
+                        <select name="course" id="course">
+                            <option value="btech">B. Tech</option>
+                            <option value="mtech">M. Tech</option>
+                            <option value="bca">BCA</option>
+                            <option value="mca">MCA</option>
+                            <option value="bba">BBA</option>
+                            <option value="mba">MBA</option>
+                            <option value="bpharm">B. Pharm</option>
+                            <option value="mpharm">M. Pharm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="marksheet">Upload previous course Marksheet</label>
+                        <br>
+                        <input type="file" name="marksheet" id="marksheet" accept="pdf/*">
+                        <br>
+                        <br>
+                        <label for="lc">Upload leaving certificate of just previos course</label>
+                        <br>
+                        <input type="file" name="lc" id="lc" accept="application/pdf">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender: </label>
+                        <br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+            </table>
+            <legend>
+                <span class="number">4</span>Contact Information
+            </legend>
+            <table cellspacing="30">
+                <tr>
+                    <td>
+                        <label for="phone">Phone: </label>
+                        <br>
+                        <br>
+                        <input type="tel" name="phone" id="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="currentaddress">Current Address: </label>
+                        <br>
+                        <textarea name="currentaddress" id="currentaddress" cols="50" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="permanentaddress">Permanent Address: </label>
+                        <br>
+                        <textarea name="permanentaddress" id="permanentaddress" cols="50" rows="5"></textarea>>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <input type="submit" value="submit" class="formbutton">
+                <input type="reset" value="reset" class="formbutton">
+            </div>
+        </form>
+    </center>
+</body>
+</html>
